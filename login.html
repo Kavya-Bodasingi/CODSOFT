@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <link type="text/css" href="/home/rgukt/Documents/vscode/css3.css">
+        <style>
+            h1{
+    font-size: 26px;
+   }
+body{
+background-image: url("/home/rgukt/CODSOFT/LandingPage/download.jpeg");
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+}
+table{
+ margin-left: 400px;
+ margin-top:10px;
+ background-color:rgb(226, 221, 221);
+ opacity:0.9;
+ color:black;
+ border-color: bisque 1px solid;
+ border-radius: 5px;
+}
+td{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 100;
+}
+td:hover{
+    box-shadow: 0 0 15px;
+    transition: all;
+    background-color: bisque;
+    opacity: 0.6;
+    cursor: pointer;
+}
+input :hover{
+    background-color: rgb(221, 197, 197);
+}
+img{
+    margin-top: 7px;
+    border:brown 1px solid ;
+    border-radius: 50%;
+    margin-left:40%;
+    cursor: pointer;
+}
+img:hover{
+ box-shadow: 0 0 15px black;
+}
+#log{
+    background-color: rgb(115, 207, 235);
+    cursor: pointer;
+    width:100px;
+    height:50px;
+}
+#log :hover{
+    box-shadow: 0 0 15px;
+    background-color: green;
+}
+        </style>
+    </head>
+    <body style="background-color: rgb(238, 243, 209);">   
+        <img src="codsoft.jpeg" width="100px"><b style="font-size: 30px;cursor: pointer;">CODSOFT</b>
+    <table cellpadding="70px" width="490px">
+        <tr>
+            <td>
+                <h1>LOGIN FORM</h1>
+                <p style="color:black;"><b style="font: bold;">Login Page</b></p>
+            </td>
+        </tr>
+        <tr>
+        <table  cellspacing="30px" width="300px" cellpadding="40px">
+            <tr>
+                <td>
+                Name  &nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    <input type="text" id="name" name="name" placeholder="Enter your First Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email-ID  &nbsp;&nbsp;&nbsp;
+                </td>
+                    <td>
+                    <input type="email" placeholder="Enter Your Email"></td>
+            </tr>
+            <tr>
+                <td>
+                    Password  &nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    <input type="password" placeholder="Enter Email Password">
+                </td>
+            </tr>
+            <tr><td colspan="2">
+                <input type="submit" id="log" value="LOGIN">
+            </td>
+            </tr>
+    </table>
+    </table>
+    </body>
+</html>
