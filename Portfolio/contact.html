@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Contact form</title>
+        <link href="contact.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            h1{
+    font-size: 35px;
+   }
+body{
+background-image: url("/home/rgukt/Documents/CODSOFT/Portfolio/pexels-pixabay-531880.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+}
+table{
+ margin-left: 400px;
+ margin-top:30px;
+ background-color:rgb(197, 191, 191);
+ opacity:0.9;
+ color:black;
+ border-color: bisque 1px solid;
+ border-radius: 5px;
+}
+nav{
+    display: flex;
+    width:80%;
+    margin-top: 20px;
+    margin-left: 8px;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+li{
+    display: inline-flex;/* it adjusts the content as per width of the screen*/
+    margin-left: 30px;
+}
+td{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 100;
+}
+td:hover{
+    box-shadow: 0 0 15px;
+    transition: all;
+    background-color: bisque;
+    opacity: 0.6;
+    cursor: pointer;
+}
+input :hover{
+    background-color: rgb(221, 197, 197);
+}
+nav ul li :hover {
+    box-shadow: 0 0 15px;
+    color: rgb(153, 120, 153);
+}
+nav img{
+   border-radius: 50%;
+}
+nav img :hover{
+    box-shadow: 0 0 15px;
+    color: azure;
+}
+nav ul li a{
+    color: rgb(243, 222, 222);
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 6px;
+    font-size: 15;
+}
+        </style>
+    </head>
+    <body>
+        <nav>
+        <img src="/home/rgukt/Documents/CODSOFT/Portfolio/kavyalogo.jpg" width="200px height:200px"><b style="font-size: 30px;cursor: pointer;">
+            Kavya Bodasingi</b>
+            <ul type="none">
+                <li><a href="home/rgukt/Documents/CODSOFT/Portfolio/portfolio.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Work</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact</a></li>
+            </ul></nav>
+        <table border="1px" cellpadding="70px" width="600px">
+            <tr>
+                <td>
+                    <h1>Contact Us</h1>
+                    <p style="color:black;"><b>Please fill the form to contact me</b></p>
+                </td>
+            </tr>
+            <tr>
+                    <table  cellspacing="60px" width="600px" cellpadding="150px">
+                        <tr>
+                            <td>
+                            Name  &nbsp;&nbsp;&nbsp;
+                            </td>
+                            <td>
+                                <input type="text" id="name" name="name" placeholder="Enter your First Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email-ID  &nbsp;&nbsp;&nbsp;
+                            </td>
+                                <td>
+                                <input type="email" placeholder="Enter Your Email"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password  &nbsp;&nbsp;&nbsp;
+                            </td>
+                            <td>
+                                <input type="password" placeholder="Enter Email Password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               Message 
+                            </td>
+                            <td>
+                                <textarea rows="3" style="text-align: start;">
+                                    message
+                                </textarea>
+                            </td>
+                        </tr>
+                        <tr><td>
+                            <input type="submit" value="SUBMIT">
+                        </td><td>
+                            <input type="reset" value="Reset">
+                        </td></tr>
+                    </table>
+            </tr>
+        </table>
+    </body>
+</html>
