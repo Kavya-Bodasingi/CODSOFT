@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CALCULATOR</title>
+        <meta charset="UTF-16">
+        <style>
+            h1{    
+                font-size: 35px;
+                letter-spacing: 5px;
+                color: rgb(119, 58, 0);
+            }
+            body{
+                background-color: rgb(232, 245, 175);
+                text-align: center;
+            }
+            .div1{
+                background-color: rgb(1, 1, 99);
+                border: rgb(2, 69, 168);
+                border-radius: 10px;
+                width: 310px;
+                height: 500px;
+                position: relative; 
+            }
+            input[type='text']{
+                margin-top: 10px;
+                width: 260px;
+                height: 55px;
+                border: 2px solid rgb(2, 2, 66);
+                border-radius: 10px;
+                font-size: 24px;
+                
+            }
+
+            .div1 .div12{
+                border: rgb(73, 69, 69);
+                border-radius: 10px;
+                width: 276px;
+                height: 350px;
+                margin: 10px;
+                margin-right: 25px;
+               
+            }
+            .div1 .div12 button{
+                width: 50px;
+                padding: 3px;
+                height: 40px;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .div1 .div12 button:hover{
+                box-shadow: 0 0 15px;
+                background-color: rgb(105, 79, 79);
+                color:white;
+                cursor: pointer;
+            }
+            table{
+                padding: 5px;
+                bottom: 30px;
+                display:grid;
+            }
+            .pink{
+                background-color: rgb(247, 104, 128);
+            }
+            .white{
+                background-color: white;
+            }
+            .grey{
+                background-color: grey;
+            }
+            .orange{
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><u>CALCULATOR</u></h1>
+        <br>
+        <center>
+        <div class="div1">
+            <br>
+            <div class="div11" >
+                <input type="text" id="calc" readonly-size="57">
+                <div class="div12">
+                    <table cellspacing="10px" cellpadding="5px">
+                        <tr>
+                            <td><button class="gery" value="POW" onclick="operation('**')">POW</button></td>
+                            <td><button class="gery" value="LOG" onclick="LOG()">LOG</button></td>
+                            <td><button class="gery" value="MOV"  onclick="backSpace()">&larr;</button></td>
+                            <td><button class="pink" value="ON"  onclick="clearAll()">ON</button> </td>
+                        </tr>
+                        <tr>
+                            <td><button class="grey" value="%" onclick="operation('+')">+</button> </td> 
+                            <td><button class="grey" value="%" onclick="operation('%')">%</button> </td> 
+                            <td><button class="pink" value="C"  onclick="clearInput()">C</button> </td> 
+                            <td><button class="pink" value="AC" onclick='clearAll()'>AC</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="white" value="7" onclick="operation('7')">7</button>  </td>
+                            <td><button class="white" value="8" onclick="operation('8')">8</button>  </td>
+                            <td><button class="white" value="9" onclick="operation('9')">9</button></td>  
+                            <td><button class="grey" value="*" onclick="operation('*')">*</button> </td> 
+                        </tr>
+                        <tr>
+                            <td><button class="white" value="4" onclick="operation('4')">4</button>  </td>
+                            <td><button class="white" value="5" onclick="operation('5')">5</button>  </td>
+                            <td><button class="white" value="6" onclick="operation('6')">6</button></td>  
+                            <td><button class="grey" value="+" onclick="operation('/')">/</button> </td> 
+                        </tr>
+                        <tr>
+                            <td><button class="white" value="1" onclick="operation('1')">1</button>  </td>
+                            <td><button class="white" value="2" onclick="operation('2')">2</button>  </td>
+                            <td><button class="white" value="3" onclick="operation('3')">3</button></td>  
+                            <td><button class="grey" value="-" onclick="operation('-')">-</button> </td> 
+                        </tr>
+                        <tr>
+                            <td><button class="grey" value="0" onclick="operation('0')">0</button>  </td>
+                            <td><button class="grey" value="00" onclick="operation('00')">00</button>  </td>
+                            <td><button class="grey" value="." onclick="operation('.')">.</button>  </td> 
+                            <td ><button class="orange" value="=" onclick="equal()">=</button> </td> 
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </center>
+    </body>
+    <script>
+        function click(val){
+            document.getElementById("calc").value = val;
+        }
+
+        function operation(val){
+            document.getElementById("calc").value += val;
+        }
+
+        function equal() {
+            try {
+                if(true)
+                click(eval(document.getElementById("calc").value));
+            } catch (error) {
+                click('Error');
+            }
+        }
+        function clearInput() {
+        document.getElementById("calc").value = '';
+    }
+    function backSpace(){
+        var back=document.getElementById("calc").value
+        document.getElementById("calc").value = back.slice(0,-1);
+
+    }
+    function clearAll() {
+        document.getElementById("calc").value = '';
+    }
+        function LOG(){
+            var log=document.getElementById("calc").value;
+            document.getElementById(calc).value=Math.log(val);
+        }
+    </script>
+</html>
