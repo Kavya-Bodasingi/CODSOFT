@@ -156,7 +156,8 @@
     }
         function LOG(){
             var log=document.getElementById("calc").value;
-            document.getElementById(calc).value=Math.log(val);
+            var result = Math.log10(log);
+            document.getElementById(calc).value=result;
         }
     </script>
 </html>
